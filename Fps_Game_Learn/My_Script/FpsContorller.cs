@@ -16,18 +16,18 @@ public class FpsContorller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // »ñÈ¡Êó±êÊäÈë
+        // è·å–é¼ æ ‡è¾“å…¥
         float mouseX = Input.GetAxis("Mouse X") * mouse_speed * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouse_speed * Time.deltaTime;
 
-        // ´¹Ö±Ğı×ª£¨ÉÏÏÂ¿´£©
+        // å‚ç›´æ—‹è½¬ï¼ˆä¸Šä¸‹çœ‹ï¼‰
         x_rotation -= mouseY;
-        x_rotation = Mathf.Clamp(x_rotation, -90f, 90f); // ÏŞÖÆ½Ç¶È
+        x_rotation = Mathf.Clamp(x_rotation, -90f, 90f); // é™åˆ¶è§’åº¦
 
-        // Ó¦ÓÃĞı×ª
+        // åº”ç”¨æ—‹è½¬
         transform.localRotation = Quaternion.Euler(x_rotation, 0f, 0f);
 
-        // Ë®Æ½Ğı×ª£¨×óÓÒ¿´£©- Ğı×ªÕû¸öÍæ¼ÒÉíÌå
+        // æ°´å¹³æ—‹è½¬ï¼ˆå·¦å³çœ‹ï¼‰- æ—‹è½¬æ•´ä¸ªç©å®¶èº«ä½“
         playerBody.Rotate(Vector3.up * mouseX);
     }
 }
