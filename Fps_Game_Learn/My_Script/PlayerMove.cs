@@ -50,25 +50,25 @@ public class PlayerMove : MonoBehaviour
     }
     void Move()
     {
-        // »ñÈ¡ÊäÈë
+        // è·å–è¾“å…¥
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
-        // »ùÓÚÏà»ú·½Ïò¼ÆËãÒÆ¶¯·½Ïò
+        // åŸºäºç›¸æœºæ–¹å‘è®¡ç®—ç§»åŠ¨æ–¹å‘
         Vector3 cameraForward = camera.forward;
         Vector3 cameraRight = camera.right;
 
-        // ºöÂÔÏà»úµÄ´¹Ö±·ÖÁ¿£¨Ö»¿¼ÂÇË®Æ½·½Ïò£©
+        // å¿½ç•¥ç›¸æœºçš„å‚ç›´åˆ†é‡ï¼ˆåªè€ƒè™‘æ°´å¹³æ–¹å‘ï¼‰
         cameraForward.y = 0f;
         cameraRight.y = 0f;
         cameraForward = cameraForward.normalized;
         cameraRight = cameraRight.normalized;
 
-        // ¼ÆËãÏà¶ÔÓÚÏà»ú·½ÏòµÄÒÆ¶¯ÏòÁ¿
+        // è®¡ç®—ç›¸å¯¹äºç›¸æœºæ–¹å‘çš„ç§»åŠ¨å‘é‡
         Vector3 movement = (cameraForward * verticalInput) + (cameraRight * horizontalInput);
         movement = movement.normalized * move_speed * Time.fixedDeltaTime;
 
-        // Ó¦ÓÃÒÆ¶¯
+        // åº”ç”¨ç§»åŠ¨
         rb.MovePosition(rb.position + movement);
     }
 }
