@@ -59,3 +59,14 @@ public class UniFind<T>//无权并查集
         return Find(a) == Find(b);
     }
 }
+//TODO:
+public class WeightedUniFind<T> : UniFind<T>//带权并查集，权重在T类型中存储
+{
+    public WeightedUniFind() : base();
+    public (int root, int totalWeight) Find(int a)
+    {}
+    public void Union(int a, int b, int weight)
+    {}
+    public int GetWeightDifference(int a, int b)
+    {}
+}
