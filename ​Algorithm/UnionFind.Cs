@@ -1,4 +1,4 @@
-public class UniFind<T>
+public class UniFind<T>//无权并查集
 {
     private List<(int pre, T value)> storage;
     private int[] size; // 按大小优化 Union
