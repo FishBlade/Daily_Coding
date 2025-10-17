@@ -1,5 +1,0 @@
-一个FPS游戏开发学习过程示例
-
-FpsContorller.cs--实现了鼠标控制fps镜头运动
-
-PlayerMove.ce--实现了简单的移动和多段跳跃（手感很差） 
